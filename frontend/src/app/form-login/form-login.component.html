@@ -1,0 +1,26 @@
+<div class="w-full flex flex-col justify-center items-center gap-4 m-5 ">
+  <div class="bg-gray-50 p-10 border flex flex-col gap-4 items-center">
+  <h1 class="font-bold">{{ titre() }}</h1>
+  <h1 [hidden]="hide()">Ceci est un titre caché</h1>
+  <div class="flex flex-col w-full max-w-xs">
+    <label for="username" class="font-medium">Username</label>
+    <input [value]="valueInputUsername()" class="border border-gray-300 p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+           type="text" name="username" id="username">
+  </div>
+
+  <div class="flex flex-col w-full max-w-xs">
+    <label for="password" class="font-medium">Password</label>
+    <input class="border border-gray-300 p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+           type="password" name="password" id="password">
+  </div>
+
+  <div class="w-full flex justify-center">
+    <button (click)="clickLogin()" type="submit"
+            class="bg-gray-500  text-white px-4 py-2 rounded hover:bg-blue-600 transition-all">
+      Se connecter
+    </button>
+
+  </div>
+
+  </div>
+</div>
